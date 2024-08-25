@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-#g
+
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-          context: ./infra/
+          context: ./nginx/
           push: true
           tags: katanatakahashi/final_project-gateway:latest
   deploy:
